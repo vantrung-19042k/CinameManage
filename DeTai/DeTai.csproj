@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2AC542CB-4ABD-48FB-B6E1-209950E71F21}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DeTai</RootNamespace>
+    <AssemblyName>DeTai</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.21.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 8.0.21\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangNhap.Designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBMySQLUtils.cs" />
+    <Compile Include="DBUtils.cs" />
+    <Compile Include="FormDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDichVu.Designer.cs">
+      <DependentUpon>FormDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPhim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPhim.Designer.cs">
+      <DependentUpon>FormPhim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVe.cs" />
+    <Compile Include="GiaoDienChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiaoDienChinh.Designer.cs">
+      <DependentUpon>GiaoDienChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoaDon.Designer.cs">
+      <DependentUpon>HoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyDichVu.Designer.cs">
+      <DependentUpon>QuanLyDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyNhanVien.Designer.cs">
+      <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyPhim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyPhim.Designer.cs">
+      <DependentUpon>QuanLyPhim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyPhongChieuPhim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyPhongChieuPhim.Designer.cs">
+      <DependentUpon>QuanLyPhongChieuPhim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyThanhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyThanhVien.Designer.cs">
+      <DependentUpon>QuanLyThanhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyVe.Designer.cs">
+      <DependentUpon>QuanLyVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SavePicture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SavePicture.Designer.cs">
+      <DependentUpon>SavePicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatVe.Designer.cs">
+      <DependentUpon>DatVe.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatVe.resx">
+      <DependentUpon>DatVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDichVu.resx">
+      <DependentUpon>FormDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPhim.resx">
+      <DependentUpon>FormPhim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiaoDienChinh.resx">
+      <DependentUpon>GiaoDienChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QuanLyDichVu.resx">
+      <DependentUpon>QuanLyDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyNhanVien.resx">
+      <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyPhim.resx">
+      <DependentUpon>QuanLyPhim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyPhongChieuPhim.resx">
+      <DependentUpon>QuanLyPhongChieuPhim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyThanhVien.resx">
+      <DependentUpon>QuanLyThanhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyVe.resx">
+      <DependentUpon>QuanLyVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SavePicture.resx">
+      <DependentUpon>SavePicture.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rap-phim.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cgv-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1195px-CJ_logo.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_french-fries-soft-drink-takeaway-fastfood-food_4306498.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_popcorn-cinema-film-sweet-dessert-food-fastfood_4306481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_sausage-burger-bread-breakfast-food_3558099.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_sausage-hotdog-snack-food-fast-fastfood-grill_4306511.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_rotation_job_seeker_employee_unemployee_work_2620504.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_12_1751358.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_cinema-glasses_531883.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_projector_cinema_movie_presentation_6427887.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_systemmigratingdataservicecloud_4904829.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\members-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_can-packaging-free-01_1777635.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_check_job_seeker_employee_unemployee_work_2620530.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_folder_job_seeker_employee_unemployee_work_2620522.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_skill_job_seeker_employee_unemployee_work_2620501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_movie-08_1277184.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_front_office_job_seeker_employee_unemployee_work_2620521.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_google_plus_one_+1_ticket_68024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_remove-ticket_49613.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_St_Patricks_Day_ticket_Clover_Irish_Ireland_3_5830908.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_ticket_carnival_coupon_cinema_festival_theater_3813284.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_furniture_living_room_house-04_3799056.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_furniture_living_room_house-03_3799055.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_furniture_living_room_house-08_3799060.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_hat_24_2875614.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Isolation_room_hospital_pandemic_6054258.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_media-cinema-clapperboard-social_media-network_4288563.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Multimedia_Film_movie_cinema_multimedia_player_3841825.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_projector_cinema_movie_presentation_6427826.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_video_512537.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tenet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biet-doi-san-moi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ca-sau-tu-than.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ham-quy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hoc-vien-quai-vat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ke_an_nap.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ke-cap-nha-dang2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mai-ben-em.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\377-3777014_add-team-members-with-multi-user-accounts-multi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_06_Credit_Card_1871423.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_constr_add_card_1267307.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_cloud_service_1312830.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_commandcustomfeatureselectronicscomputingservice_4904818.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_telephone-24-7-customer-support_532791.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_french-fries-snacks-fast-food_3558116.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_hamburger-burger-drink-soft-fastfood-fast-food_4306500.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_hot-dogs-truck-food-delivery-street_3558109.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_bill_discount_sale_shop_4177570.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_9_1517208.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_coffee-cup-package-d-free-09_1777634.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\300px-Thandieudaidiep20066nt.jpg" />
+    <None Include="Resources\The_Demi-Gods_and_Semi_Devils_%282013_TV_series%29.jpg" />
+    <None Include="Resources\ham-quy1.jpg" />
+    <None Include="Resources\ca-sau-tu-than1.jpg" />
+    <None Include="Resources\biet-doi-san-moi1.jpg" />
+    <None Include="Resources\Anh-hung-xa-dieu-2016-661991.jpg" />
+    <None Include="Resources\Anhhungxadieu1.jpg" />
+    <None Include="Resources\300px-Thandieudaidiep20066nt1.jpg" />
+    <Content Include="Resources\Anh-hung-xa-dieu-2016-66199.jpg" />
+    <Content Include="Resources\Anhhungxadieu.jpg" />
+    <Content Include="Resources\cach-lam-banh-chuoi-chien-phong-gion-rum-thom-ngon-kho-cuong-tai-nha-7-1586257759-409-width512height288.jpg" />
+    <None Include="Resources\khoai1.jpg" />
+    <None Include="Resources\huong-dan-lam-bap-rang-bo-bang-noi-inox-11.jpg" />
+    <None Include="Resources\ga1.jpg" />
+    <None Include="Resources\cach-lam-banh-chuoi-chien-phong-gion-rum-thom-ngon-kho-cuong-tai-nha-7-1586257759-409-width512height2881.jpg" />
+    <Content Include="Resources\ga.jpg" />
+    <Content Include="Resources\huong-dan-lam-bap-rang-bo-bang-noi-inox-1.jpg" />
+    <Content Include="Resources\khoai.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
